@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 
 app.use(express.json());
+app.get('/',(req, res)=> {
+
+res.send("kuch bhi");
+})
 
 app.post('/calculate', (req, res)=>{
     const {typeOfOperation, a, b} = req.body;
